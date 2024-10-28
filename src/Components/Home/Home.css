@@ -1,0 +1,75 @@
+.carousel {
+  width: 95vw; /* Full viewport width */
+  height: 90vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow */
+}
+.carousel-item {
+  height: 90vh; /* Make each carousel item the full height of the viewport */
+}
+.carousel-item img {
+  width: 100%; /* Ensures the image fills the carousel item */
+  height: 800%; /* Optional: makes the image fill the height */
+  object-fit: cover; /* Optional: cover ensures the image retains its aspect ratio */
+}
+/* Overlay and Caption */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(226, 213, 170, 0.384); /* Gray overlay, always visible */
+  z-index: 2; /* Below the text but above the image */
+  pointer-events: none; /* Allows clicks to pass through the overlay */
+}
+@keyframes textAnimation {
+  0% { font-size: 3rem; }   /* Start big */
+  25% { font-size: 1.5rem; } /* Transition to small */
+  50% { font-size: 1.5rem; } /* Stay small */
+  75% { font-size: 3rem; }   /* Transition back to big */
+  80% { font-size: 3rem; }  /* Stay big */
+}
+.carousel-caption-text {
+  animation: textAnimation 4s ease infinite; /* Animation duration and repeat */
+}
+.carousel-caption {
+  display: flex;
+  flex-direction: column; /* Stacks the title above the statement */
+  justify-content: center; /* Centers content vertically */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Ensures text is above the overlay */
+  width: 950%;
+  color: rgb(146, 142, 142); /* Ensures text is visible */
+  pointer-events: none;
+}
+/* Make sure arrows are above the overlay */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 4; /* Higher than the overlay and text */
+}
+.carousel-caption-text {
+  font-weight: bold;
+}
+p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.carousel-item .carousel-caption {
+  display: flex;
+  flex-direction: column; /* Stacks the title above the statement */
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Ensures text is above the overlay */
+  width: 100%;
+  color: rgb(48, 48, 46); /* Ensures text is visible */ 
+}

@@ -1,0 +1,46 @@
+.footer {
+    border: 1px solid #b14c11;
+    background-color: #F5F5F5;
+    color: #333333;
+    padding: 10px 20px;
+  }
+  
+  .footer-text {
+    display: flex;
+    justify-content: space-between; /* Space out button and centered text */
+    align-items: center; /* Vertically centers the p and button */
+  }
+  
+  .footer-text p {
+    flex-grow: 1; /* Centers the text within the flex container */
+    margin: 0;
+    text-align: center;
+  }
+  
+  .back-to-top {
+    margin: 0;
+    padding: 8px;
+    background-color: #b3adaa;
+    color: #111111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Adjust icon size */
+  }
+  
+  .back-to-top:hover {
+    background-color: #f58020c2;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .footer-text {
+      flex-direction: column;
+      text-align: center;
+    }
+    .back-to-top {
+      margin-top: 10px;
+    }
+  }
+  

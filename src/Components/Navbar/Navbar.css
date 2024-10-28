@@ -1,0 +1,19 @@
+/* Custom styles for the Ant Design Menu */
+.custom-menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Ensure the text color stays red on hover, active, and selected */
+  .custom-menu .ant-menu-item:hover,
+  .custom-menu .ant-menu-item-active,
+  .custom-menu .ant-menu-item-selected {
+    color: #F19E39 !important; /* Set color to #F19E39 on hover, active, and selected */
+  }
+  
+  /* Custom underline color */
+  .custom-menu .ant-menu-item-selected::after,
+  .custom-menu .ant-menu-item-active::after {
+    border-bottom: 2px solid #F19E39 !important; /* Custom color underline on hover and select */
+  }
+  
